@@ -1,5 +1,6 @@
 ﻿using CsvHelper.Configuration.Attributes;
-
+using Pokemon.Common.Data.EntityModels;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pokemon.Dataloader.Models
 {
@@ -65,5 +66,10 @@ namespace Pokemon.Dataloader.Models
         [Index(16)]
         [Name("Other")]
         public string Other { get; set; }
+
+        [ForeignKey("Type1")]
+        public virtual PokemonType Type1 { get; set; }
+        [ForeignKey("Type2")]
+        public virtual PokemonType Type2 { get; set; }
     }
 }

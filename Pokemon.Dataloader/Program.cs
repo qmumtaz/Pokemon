@@ -22,6 +22,8 @@ namespace Pokemon.Dataloader
 
            //TODO: 2 - Map pokemon to database objects
 
+
+
            //TODO: 3 - Save to database
         }
 
