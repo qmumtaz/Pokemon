@@ -68,8 +68,8 @@ namespace Pokemon.Dataloader.Models
         public string Other { get; set; }
 
         [ForeignKey("Type1")]
-        public virtual PokemonType Type1 { get; set; }
+        public virtual PokemonType PokemonType1 { get; set; }
         [ForeignKey("Type2")]
-        public virtual PokemonType Type2 { get; set; }
+        public virtual PokemonType PokemonType2 { get; set; }
     }
 }

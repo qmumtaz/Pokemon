@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pokemon.Common.Data.EntityModels;
 namespace Pokemon.Common.Data
 {
 

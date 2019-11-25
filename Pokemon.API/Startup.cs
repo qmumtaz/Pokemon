@@ -27,8 +27,8 @@ namespace Pokemon.API
             services.AddAutoMapper(typeof(Startup));
 
             services.AddDbContext<PokemonContext>(
-                options => options.UseSqlServer(
-                    Configuration.GetConnectionString(connectionStringSettings.DefaultConnection)));
+                options => options.UseSqlServer(connectionStringSettings.DefaultConnection, 
+                options => options.MigrationsAssembly("Pokemon.Common")));
 
             services.AddControllers();
             services.AddApiVersioning();
