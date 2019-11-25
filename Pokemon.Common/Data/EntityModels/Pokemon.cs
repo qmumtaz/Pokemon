@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Pokemon.Common.Data.EntityModels
 {
-   public class Pokemon
+ public class Pokemon
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -34,9 +34,9 @@ namespace Pokemon.Common.Data.EntityModels
 
         public bool Legendary { get; set; }
 
-        [ForeignKey("Type1")]
+        [ForeignKey("Type1Id")]
         public virtual PokemonType Type1 { get; set; }
-        [ForeignKey("Type2")]
+        [ForeignKey("Type2Id")]
         public virtual PokemonType Type2 { get; set; }
     }
 }
