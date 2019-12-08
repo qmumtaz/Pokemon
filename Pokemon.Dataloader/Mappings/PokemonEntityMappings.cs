@@ -22,6 +22,7 @@ namespace Pokemon.Dataloader.Mappings
                     Attack = item.Attack,
                     Type1 = types.Where(x => x.Type == item.Type1).FirstOrDefault(),
                     Type2 = types.Where(x => x.Type == item.Type2).FirstOrDefault(),
+
                 };
                 entityList.Add(p);
 

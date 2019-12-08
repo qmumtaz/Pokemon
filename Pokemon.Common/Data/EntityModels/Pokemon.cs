@@ -30,9 +30,9 @@ namespace Pokemon.Common.Data.EntityModels
 
         public int Speed { get; set; }
 
-        public short Generation { get; set; }
+        public string Generation { get; set; }
 
-        public bool Legendary { get; set; }
+        public string Legendary { get; set; }
 
         [ForeignKey("Type1Id")]
         public virtual PokemonType Type1 { get; set; }
