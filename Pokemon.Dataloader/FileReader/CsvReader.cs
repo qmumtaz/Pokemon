@@ -47,11 +47,6 @@ namespace Pokemon.Dataloader.FileReader
                 Console.WriteLine(e.Message);
                 throw;
             }
-            finally
-            {
-                var pokemon = records as List<Models.Pokemon>;
-                Audit.RecordsFound(pokemon);
-            }
         }
     }
 }
