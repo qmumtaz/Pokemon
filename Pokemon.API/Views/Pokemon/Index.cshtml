@@ -1,0 +1,17 @@
+﻿@model  IEnumerable<Pokemon.Common.Data.EntityModels.Pokemon>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<ul>
+    @foreach (var item in Model)
+    {
+    <li>@item.Name</li>
+    <li>@item.Type1</li>
+    }
+
+</ul>
+
+

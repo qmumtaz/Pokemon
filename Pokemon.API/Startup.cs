@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pokemon.API.RepositoryPattern;
 using Pokemon.Common.Configuration;
 using Pokemon.Common.Data;
 
@@ -32,6 +33,9 @@ namespace Pokemon.API
 
             services.AddControllers();
             services.AddApiVersioning();
+            services.AddTransient<IPokemonRepository, PokemonRepository>();
+
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

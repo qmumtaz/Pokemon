@@ -22,7 +22,13 @@ namespace Pokemon.Dataloader.Mappings
                     Attack = item.Attack,
                     Type1 = types.Where(x => x.Type == item.Type1).FirstOrDefault(),
                     Type2 = types.Where(x => x.Type == item.Type2).FirstOrDefault(),
-
+                    HealthPoints = item.HealthPoints,
+                    Defense = item.Defense,
+                    Speed = item.Speed,
+                    SpecialAttack = item.SpecialAttack,
+                    SpecialDefence = item.SpecialDef,
+                    Generation = item.Generation,
+                    Legendary = item.Legendary,
                 };
                 entityList.Add(p);
 

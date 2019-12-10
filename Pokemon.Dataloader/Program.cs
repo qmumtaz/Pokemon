@@ -24,12 +24,14 @@ namespace Pokemon.Dataloader
             PokemonEntityMappings mappings = new PokemonEntityMappings();
             //TODO: 2 - Map pokemon to database objects
             var mappedTypes = mappings.ToPokemonType(pokemon);
+            var mappedPokemon = mappings.ToPokemonEntityList(pokemon,mappedTypes);
 
 
             //TODO: 3 - Save to database
            var context =  _serviceProvider.GetService<PokemonContext>();
            context.PokemonTypes.AddRange(mappedTypes);
-           context.SaveChanges();
+           context.Pokemons.AddRange(mappedPokemon);
+            context.SaveChanges();
         }
 
         private static void ConfigureServices()
