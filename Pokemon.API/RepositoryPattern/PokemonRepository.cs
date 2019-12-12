@@ -25,5 +25,22 @@ namespace Pokemon.API.RepositoryPattern
 
             return pokemon;
         }
+
+        
+
+      public IEnumerable<Common.Data.EntityModels.Pokemon> GetByTypeName(string name)
+        {
+            var pokemon = _db.Pokemons.Where(x => x.Type1.Type == name).ToList();
+
+            return pokemon;
+        }
+
+
+        public IEnumerable<Common.Data.EntityModels.Pokemon> GetByType1And2(string name, string name2)
+        {
+            var pokemon = _db.Pokemons.Where(x => x.Type1.Type == name && x.Type2.Type == name2).ToList();
+
+            return pokemon;
+        }
     }
 }

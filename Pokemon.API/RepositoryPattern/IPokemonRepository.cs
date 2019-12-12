@@ -12,6 +12,9 @@ namespace Pokemon.API.RepositoryPattern
 
         Pokemon.Common.Data.EntityModels.Pokemon GetById(int id);
 
+        IEnumerable<Pokemon.Common.Data.EntityModels.Pokemon> GetByTypeName( string name);
+        IEnumerable<Pokemon.Common.Data.EntityModels.Pokemon> GetByType1And2(string name, string name2);
+
 
     }
 }

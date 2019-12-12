@@ -43,7 +43,34 @@ namespace Pokemon.API.Controllers
             return Ok(pokemon);
         }
 
-      
+        [HttpGet]
+        [Route("type/{name}")]
+        public IActionResult GetByTypeName(string name)
+        {
+            var pokemon = _pk.GetByTypeName(name);
+
+            if (pokemon == null)
+            {
+                return NotFound("Pokemon not found");
+            }
+
+            return Ok(pokemon);
+        }
+
+        [HttpGet]
+        [Route("type/{name}/{name2}")]
+        public IActionResult GetByType1And2(string name , string name2)
+        {
+            var pokemon = _pk.GetByType1And2(name, name2);
+
+            if (pokemon == null)
+            {
+                return NotFound("Pokemon not found");
+            }
+
+            return Ok(pokemon);
+        }
+
 
     }
 }
